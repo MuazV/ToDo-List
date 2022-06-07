@@ -1,0 +1,119 @@
+
+:root {
+	--container: #A69677;
+	--arkplan: #0D0D0D;
+	--input: #F2C9CC;
+	--x: #2E83F2;
+	--koyumavi:  #2C6CBF;
+	--white : #F2F2F2;
+	--kırmızı : #A63247;
+  }
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Courier New', Courier, monospace;
+}
+body{
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--arkplan);
+	background-size: cover;
+	
+}
+
+.container{
+	margin: 3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: var(--container);
+	color: var(--arkplan);
+	width: 400px;
+	border-radius: 10px;
+	
+		
+}
+.content {
+	width: 350px;
+	
+}
+
+main {
+	
+	margin-top: 1rem;
+	padding-left: 1rem;
+	
+}
+h1 {
+	padding-top: 1rem;
+	text-decoration: underline;
+
+}
+.gen-form input{
+	margin-top: 2rem;
+	cursor: pointer;
+	padding: 8px 12px;
+	outline: none;
+	border: none;
+	margin-bottom: 1rem;
+	color: var(--arkplan);
+	background-color: var(--white);
+	font-size: 1rem;
+	font-weight: 600;
+	border-radius: 5px;
+}
+
+
+.tasks {
+	padding-bottom: 2rem;
+	padding-right: 2rem;
+}
+.task {
+	padding: 0.5rem;
+	margin-top: 1rem;
+	background-color: var(--white);
+	display: flex;
+	justify-content: flex-start;
+	border-radius: 5px;
+
+}
+
+.text {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 250px;
+	padding-right: 2rem;
+	color: var(--koyumavi);
+	font-weight: 600;
+	border-radius: 5px;
+}
+.todo_cb {
+	margin-right: 1rem;
+}
+
+.sil {
+	padding: 3px;
+	color: var(--kırmızı);
+	font-weight: 600;
+	border: 1px solid #0D0D0D;
+}
+
+
+.bot-head {
+	cursor: progress;
+	margin-top: 2rem;
+	margin-left: 1rem;
+	margin-right: 1rem;
+	text-decoration: underline;
+}
+
+.todo_cb:checked ~ .text {
+	text-decoration: line-through;
+	color: var(--container);
+}
