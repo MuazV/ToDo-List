@@ -1,13 +1,13 @@
 
 :root {
-	--container: #A69677;
-	--arkplan: #0D0D0D;
-	--input: #F2C9CC;
-	--x: #2E83F2;
-	--koyumavi:  #2C6CBF;
-	--white : #F2F2F2;
-	--kırmızı : #A63247;
+	--arkaplan : #D9A404;
+	--container : #F2C53D;
+	--bottominp : #183B59;
+	--yazitip : #F2DC99;
+	--different : #BF907E;
+
   }
+
 
 *{
 	margin: 0;
@@ -20,52 +20,56 @@ body{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: var(--arkplan);
+	background-image: url(./3.jpg);
+	background-repeat: no-repeat;
+	background-position: left bottom;
 	background-size: cover;
+	height: 100vh;
+	
 	
 }
 
 .container{
 	margin: 3rem;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	/* justify-content: center; */
+	/* align-items: center; */
 	flex-direction: column;
 	background-color: var(--container);
-	color: var(--arkplan);
-	width: 400px;
+	color: #0D0D0D;
+	width: 430px;
 	border-radius: 10px;
+	height: 80vh;
 	
 		
 }
-.content {
-	width: 350px;
-	
-}
+
 
 main {
-	
 	margin-top: 1rem;
 	padding-left: 1rem;
 	
 }
 h1 {
-	padding-top: 1rem;
+	padding-left: 2rem;
+	padding-top: 2rem;
+	margin-left: 2rem;
 	text-decoration: underline;
 
 }
 .gen-form input{
 	margin-top: 2rem;
 	cursor: pointer;
-	padding: 8px 12px;
+	padding: 8px 2rem;
 	outline: none;
 	border: none;
 	margin-bottom: 1rem;
-	color: var(--arkplan);
-	background-color: var(--white);
+	color: #0D0D0D;
 	font-size: 1rem;
 	font-weight: 600;
 	border-radius: 5px;
+	border: 1px double var(--bottominp);
+	background-color: var(--yazitip);
 }
 
 
@@ -76,9 +80,10 @@ h1 {
 .task {
 	padding: 0.5rem;
 	margin-top: 1rem;
-	background-color: var(--white);
+	background-color: var(--yazitip);
 	display: flex;
 	justify-content: flex-start;
+	align-items: center;
 	border-radius: 5px;
 
 }
@@ -89,19 +94,23 @@ h1 {
 	white-space: nowrap;
 	width: 250px;
 	padding-right: 2rem;
-	color: var(--koyumavi);
+	color: var(--bottominp);
 	font-weight: 600;
 	border-radius: 5px;
+	font-size: 1.1rem;
 }
 .todo_cb {
 	margin-right: 1rem;
 }
 
 .sil {
-	padding: 3px;
-	color: var(--kırmızı);
+	padding: 5px;
+	color: #BF0436;
 	font-weight: 600;
 	border: 1px solid #0D0D0D;
+	margin-left: 5rem;
+	
+	
 }
 
 
@@ -115,5 +124,22 @@ h1 {
 
 .todo_cb:checked ~ .text {
 	text-decoration: line-through;
-	color: var(--container);
+	color: var(--bottominp);
+}
+
+@media (max-width:600px){
+	.container {
+		width: 300px;
+		height: 60vh;
+		margin: 1rem;
+	
+	}
+	h1 {
+		margin:0;
+	}
+	.gen-form input {
+		padding: 0.5rem;
+		margin: 0.5rem;
+	}
+	
 }
